@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.score {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#game-canvas {
+    background-color: #e8e8e8;
+    border: 2px solid #333;
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+}
+
+#start-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#start-btn:hover {
+    background-color: #45a049;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls-info {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.control-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.horizontal-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.control-buttons button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.control-buttons button:hover {
+    background-color: #0b7dda;
+}
+
+@media (max-width: 500px) {
+    .game-container {
+        max-width: 340px;
+        padding: 15px;
+    }
+    
+    #game-canvas {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .control-buttons button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
